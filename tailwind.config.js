@@ -16,6 +16,9 @@ module.exports = {
     },
 
     extend: {
+      scale: {
+        '85': '1.85',
+      },
       screens: {
         s:'320px',
         ss:'370px',

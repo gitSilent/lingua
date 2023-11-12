@@ -2,18 +2,22 @@ import React from "react";
 import Header from "../components/Header";
 import MainScreen from "../components/MainScreen";
 import AboutCard from "../components/AboutCard";
+import InfoCard from "../components/InfoCard";
+import cardImg from "../media/card-image.png"
+import bgAbout from "../media/mainPage_aboutItems.png"
 
 export default function MainPage() {
     return (
         <div className="h-full relative">
             <Header />
             <MainScreen />
-            <section className="w-full max-w-[1220px] px-[20px] mt-[50px]">
+            <section className="w-full mx-auto max-w-[1220px] px-[20px] mt-[50px]">
                 <span className="block font-semibold italic text-[16px] mb-[12px] text-[#00BA61]">Наши ценности</span>
                 <h2 className="font-black text-[#2D2D2D] text-[28px] mb-[25px] l:text-[48px]">
                     О лингвистическом <br/> пространстве INSPIRA<span className="text-[#00BA61]">"</span>
                 </h2>
-                <div className="flex gap-[10px] overflow-x-scroll mx:justify-between mx:overflow-x-hidden">
+                <div className="relative flex gap-[10px] max-h-[620px] overflow-y-hidden overflow-x-scroll mx:justify-between mx:overflow-x-hidden">
+                    <img src={bgAbout} alt="" className="hidden lx:block absolute object-cover w-full scale-75 top-[-200px]"/>
                     <div className="flex gap-[10px] mx:flex-col">
                         <AboutCard
                             title="Никаких секретов"
@@ -22,7 +26,7 @@ export default function MainPage() {
                         />
                         <AboutCard
                             title="Индивидуальный подход - КЛЮЧ ко всему!"
-                            desc="Все мы очень разные и одни и те же методы не работают универсально. Именно поэтому мы предлагаем тебе курсы разработанные согласно твоим целям и способностям,для оптимизации процесса. Как мы это делаем? Сначала мы проводим тщательное тестирование, которое раскроет все твои сильные стороны и подсветит слабые И только так ты добьешься своих целей!"
+                            desc="Все мы очень разные и одни и те же методы не работают универсально. Именно поэтому мы предлагаем тебе курсы разработанные согласно твоим целям и способностям, для оптимизации процесса. Как мы это делаем? Сначала мы проводим тщательное тестирование, которое раскроет все твои сильные стороны и подсветит слабые И только так ты добьешься своих целей!"
                             bgChar="2"
                         />
                         <AboutCard
@@ -51,15 +55,16 @@ export default function MainPage() {
                     </div>
                 </div>
             </section>
-
-            {/* <div className="flex flex-col items-center sm:grid sm:grid-flow-row-dense sm:grid-cols-2 max-w-[780px] gap-[15px] l:gap-[15px]">
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах,Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором! о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-                <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
-            </div> */}
+            {/* <section className="flex jusw-full">
+              <div className="flex flex-col items-center sm:grid sm:grid-flow-row-dense sm:grid-cols-2 max-w-[780px] gap-[15px] l:gap-[15px]">
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах,Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором! о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+                  <InfoCard img={cardImg} title="1. Попробуйте бесплатно!" desc="Запишитесь на пробное занятие, чтобы узнать о курсах, о нас и познакомиться с нашим репетитором!" withButton={true} buttonText="Выбрать репетитора" isAboutCard={false} />
+              </div>
+            </section> */}
         </div>
     );
 }
