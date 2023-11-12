@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
-        <header className="w-full shadow-header">
-            <div className="max-w-[1200px] w-full mx-auto px-[20px] py-[15px] flex justify-between">
+        <header className="fixed w-full shadow-header z-50 bg-[#F3F4F5]">
+            <div className="max-w-[1200px] w-full mx-auto px-[20px] py-[10px] flex justify-between items-center">
                 <div className="flex gap-[8px]">
-                    <img src={menu} alt="" className="max-w-[24px] w-full" />
-                    <img src={logo} alt="" className="max-w-[89px] w-full" />
+                    <img src={menu} alt="" className="max-w-[24px] w-full l:hidden" />
+                    <img src={logo} alt="" className="max-w-[89px] w-full l:max-w-[106px] l:h-[24px]" />
                 </div>
                 <div className="flex gap-[25px] items-center">
                     <div className="hidden l:flex gap-[20px] font-medium text-[16px]">

@@ -13,6 +13,19 @@
     line-height: 1;
 }
 
+*{
+    z-index: 5;
+}
+
+@media screen and (min-width:1200px) {
+    .main-screen::after, .main-screen::before{
+        z-index: -1;
+    }
+}
+.out-borders{
+    z-index: 1;
+}
+
 /* Links */
 
 a, a:link, a:visited  {
@@ -43,7 +56,7 @@ img {
 }
 
 img, svg {
-	max-width: 100%;
+	/* max-width: 100%; */
 	height: auto;
 }
 
@@ -89,8 +102,28 @@ label {
 legend {
 	display: block;
 }
+html{
+    height: 100%;
+}
+#root{
+    height: 100%;
+}
 
 body{ 
   height: 100%;
-  background-color: #F7F5F7;
+  background-color: white;
 }
+
+.bevealed-bottom::after {
+    display: block; 
+    content: ''; 
+    width: 100%; 
+    height: 30px; 
+    background: linear-gradient(to top right, rgb(255, 255, 255) 50%, rgba(255,0,0,0) 52%);
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    /* transform: translateY(-100%);  */
+    z-index: 15;
+}
+

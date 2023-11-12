@@ -21,7 +21,9 @@ module.exports = {
         ss:'370px',
         sx:'410px',
         xm:'850px',
-        l:'1200px'
+        l:'1200px',
+        fhd:'1920px',
+        uw:'3000px'
       },
       boxShadow: {
         'header': '0px 2px 15px rgba(0, 0, 0, 0.10)'
